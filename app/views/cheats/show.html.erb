@@ -1,0 +1,13 @@
+<p>
+  <b>Language:</b>
+  <%=h @cheat.language_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @cheat.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_cheat_path(@cheat) %> |
+<%= link_to 'Back', cheats_path %>

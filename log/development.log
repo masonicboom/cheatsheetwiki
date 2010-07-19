@@ -1,0 +1,57 @@
+
+
+Processing LanguagesController#new (for 127.0.0.1 at 2010-07-19 09:55:25) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'languages'):
+  app/controllers/languages_controller.rb:27:in `new'
+  app/controllers/languages_controller.rb:27:in `new'
+  <internal:prelude>:8:in `synchronize'
+  d:/programs/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  d:/programs/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  d:/programs/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (160.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (103.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (100.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLanguages (20100719135310)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "languages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100719135310')[0m
+Migrating to CreateCheats (20100719135434)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "cheats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "language_id" integer, "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100719135434')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("cheats")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("languages")[0m
+
+
+Processing LanguagesController#new (for 127.0.0.1 at 2010-07-19 09:55:51) [GET]
+Rendering template within layouts/languages
+Rendering languages/new
+Completed in 55ms (View: 44, DB: 0) | 200 OK [http://localhost/languages/new]
+
+
+Processing CheatsController#new (for 127.0.0.1 at 2010-07-19 09:56:28) [GET]
+Rendering template within layouts/cheats
+Rendering cheats/new
+Completed in 55ms (View: 46, DB: 0) | 200 OK [http://localhost/cheats/new]
