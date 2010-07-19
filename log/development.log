@@ -55,3 +55,257 @@ Processing CheatsController#new (for 127.0.0.1 at 2010-07-19 09:56:28) [GET]
 Rendering template within layouts/cheats
 Rendering cheats/new
 Completed in 55ms (View: 46, DB: 0) | 200 OK [http://localhost/cheats/new]
+
+
+Processing CheatsController#index (for 127.0.0.1 at 2010-07-19 12:35:57) [GET]
+  [4;36;1mCheat Load (7.0ms)[0m   [0;1mSELECT * FROM "cheats" [0m
+Rendering template within layouts/cheats
+Rendering cheats/index
+Completed in 59ms (View: 44, DB: 7) | 200 OK [http://localhost/cheats]
+
+
+Processing CheatsController#new (for 127.0.0.1 at 2010-07-19 12:35:59) [GET]
+Rendering template within layouts/cheats
+Rendering cheats/new
+Completed in 41ms (View: 31, DB: 0) | 200 OK [http://localhost/cheats/new]
+
+
+Processing CheatsController#create (for 127.0.0.1 at 2010-07-19 12:36:03) [POST]
+  Parameters: {"authenticity_token"=>"K8DUwJDvkm+nTnbzj4+qH6CPIGJAhlNXQtcEYPFRymY=", "cheat"=>{"language_id"=>"R", "content"=>"array indexing: 1-based\r\nline-terminator: semicolon (optional)\r\n\r\n# basics #\r\n\r\n## comments ##\r\nany text following a # is a comment\r\n\r\n## variables ##\r\n  x = 4  # assigns the value 4 to x\r\n  x <- 4 # this does the same thing\r\n\r\n## operators ##\r\n  * + addition\r\n  * - subtraction\r\n  * * multiplication\r\n  * / division\r\n  * ^ exponentiation\r\n  * | logical or\r\n  * & logical and\r\n  * ! logical not\r\n  * < less than\r\n  * <= less than or equal\r\n  * > greater than\r\n  * >= greater than or equal\r\n  * == equality test\r\n  * != inequality test\r\n\r\n## control flow ##\r\n\r\n### if statements ###\r\n  if (condition) {\r\n    ..do stuff..\r\n  } else if (other_condition) {\r\n    ..do other stuff..\r\n  } else {\r\n    ..do last resort stuff..\r\n  }\r\n\r\n  ifelse(condition, ..do this if true.., ..otherwise do this..)\r\n\r\n## functions ##\r\nfun <- function(arg1, arg2='default value') {\r\n  42 # the last value in a function is returned. \r\n  # if you want to be explicit, use return(value)\r\n}\r\nfun(4)\r\n\r\n## basic data types ##\r\n\r\n### vectors ###\r\n\r\nc(1,2) concatenates 1 and 2 into a vector\r\nv[n] retrieves the n-th element of v\r\nwhich(v == n) gives the indices at which v is equal to n\r\n\r\n### matrices ###\r\n\r\nX %*% Y does matrix multiplication on X and Y\r\nt(X) returns the transpose of X\r\nX + 1 adds 1 to each element of X; other scalar operators work similarly\r\n\r\n### lists ###\r\nl <- list(1,2,'three') # constructs a list\r\nl[[1]] # retrieves the first element of l\r\n"}, "commit"=>"Create"}
+  [4;35;1mCheat Create (14.0ms)[0m   [0mINSERT INTO "cheats" ("language_id", "content", "created_at", "updated_at") VALUES(0, 'array indexing: 1-based
+line-terminator: semicolon (optional)
+
+# basics #
+
+## comments ##
+any text following a # is a comment
+
+## variables ##
+ x = 4 # assigns the value 4 to x
+ x <- 4 # this does the same thing
+
+## operators ##
+ * + addition
+ * - subtraction
+ * * multiplication
+ * / division
+ * ^ exponentiation
+ * | logical or
+ * & logical and
+ * ! logical not
+ * < less than
+ * <= less than or equal
+ * > greater than
+ * >= greater than or equal
+ * == equality test
+ * != inequality test
+
+## control flow ##
+
+### if statements ###
+ if (condition) {
+ ..do stuff..
+ } else if (other_condition) {
+ ..do other stuff..
+ } else {
+ ..do last resort stuff..
+ }
+
+ ifelse(condition, ..do this if true.., ..otherwise do this..)
+
+## functions ##
+fun <- function(arg1, arg2=''default value'') {
+ 42 # the last value in a function is returned. 
+ # if you want to be explicit, use return(value)
+}
+fun(4)
+
+## basic data types ##
+
+### vectors ###
+
+c(1,2) concatenates 1 and 2 into a vector
+v[n] retrieves the n-th element of v
+which(v == n) gives the indices at which v is equal to n
+
+### matrices ###
+
+X %*% Y does matrix multiplication on X and Y
+t(X) returns the transpose of X
+X + 1 adds 1 to each element of X; other scalar operators work similarly
+
+### lists ###
+l <- list(1,2,''three'') # constructs a list
+l[[1]] # retrieves the first element of l
+', '2010-07-19 16:36:03', '2010-07-19 16:36:03')[0m
+Redirected to http://localhost:3000/cheats/1
+Completed in 226ms (DB: 14) | 302 Found [http://localhost/cheats]
+
+
+Processing CheatsController#show (for 127.0.0.1 at 2010-07-19 12:36:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCheat Load (1.0ms)[0m   [0;1mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/show
+Completed in 34ms (View: 20, DB: 1) | 200 OK [http://localhost/cheats/1]
+
+
+Processing CheatsController#show (for 127.0.0.1 at 2010-07-19 13:06:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCheat Load (0.0ms)[0m   [0mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/show
+
+ActionView::TemplateError (undefined method `javascript_indclude_tag' for #<ActionView::Base:0x412c020>) on line #20 of app/views/cheats/show.html.erb:
+17: </form>
+18: <div class="wmd-preview"></div>
+19: 
+20: <%= javascript_indclude_tag 'wmd/wmd.js' %>
+
+    app/views/cheats/show.html.erb:20
+    app/controllers/cheats_controller.rb:18:in `show'
+    <internal:prelude>:8:in `synchronize'
+    d:/programs/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    d:/programs/Ruby191/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    d:/programs/Ruby191/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (138.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CheatsController#show (for 127.0.0.1 at 2010-07-19 13:06:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCheat Load (0.0ms)[0m   [0;1mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/show
+Completed in 87ms (View: 18, DB: 0) | 200 OK [http://localhost/cheats/1]
+
+
+Processing CheatsController#show (for 127.0.0.1 at 2010-07-19 13:08:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCheat Load (1.0ms)[0m   [0mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/show
+Completed in 30ms (View: 20, DB: 1) | 200 OK [http://localhost/cheats/1]
+
+
+Processing CheatsController#show (for 127.0.0.1 at 2010-07-19 13:09:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCheat Load (1.0ms)[0m   [0;1mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/show
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://localhost/cheats/1]
+
+
+Processing CheatsController#show (for 127.0.0.1 at 2010-07-19 13:13:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCheat Load (1.0ms)[0m   [0mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/show
+Completed in 29ms (View: 19, DB: 1) | 200 OK [http://localhost/cheats/1]
+
+
+Processing CheatsController#edit (for 127.0.0.1 at 2010-07-19 13:13:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCheat Load (1.0ms)[0m   [0;1mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/edit
+Completed in 40ms (View: 32, DB: 1) | 200 OK [http://localhost/cheats/1/edit]
+
+
+Processing CheatsController#edit (for 127.0.0.1 at 2010-07-19 13:13:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCheat Load (0.0ms)[0m   [0mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/edit
+Completed in 41ms (View: 32, DB: 0) | 200 OK [http://localhost/cheats/1/edit]
+
+
+Processing CheatsController#update (for 127.0.0.1 at 2010-07-19 13:14:29) [PUT]
+  Parameters: {"authenticity_token"=>"K8DUwJDvkm+nTnbzj4+qH6CPIGJAhlNXQtcEYPFRymY=", "cheat"=>{"language_id"=>"0", "content"=>"<p>array indexing: 1-based\r\nline-terminator: semicolon (optional)</p>\r\n\r\n<h1>basics</h1>\r\n\r\n<h2>comments</h2>\r\n\r\n<p>any text following a # is a comment</p>\r\n\r\n<h2>variables</h2>\r\n\r\n<p>x = 4  # assigns the value 4 to x\r\n  x &lt;- 4 # this does the same thing</p>\r\n\r\n<h2>operators</h2>\r\n\r\n<ul>\r\n<li><ul><li>addition</li></ul></li>\r\n<li><ul><li>subtraction</li></ul></li>\r\n<li><ul><li>multiplication</li></ul></li>\r\n<li>/ division</li>\r\n<li>^ exponentiation</li>\r\n<li>| logical or</li>\r\n<li>&amp; logical and</li>\r\n<li>! logical not</li>\r\n<li>&lt; less than</li>\r\n<li>&lt;= less than or equal</li>\r\n<li>> greater than</li>\r\n<li>>= greater than or equal</li>\r\n<li>== equality test</li>\r\n<li>!= inequality test</li>\r\n</ul>\r\n\r\n<h2>control flow</h2>\r\n\r\n<h3>if statements</h3>\r\n\r\n<p>if (condition) {\r\n    ..do stuff..\r\n  } else if (other&#95;condition) {\r\n    ..do other stuff..\r\n  } else {\r\n    ..do last resort stuff..\r\n  }</p>\r\n\r\n<p>ifelse(condition, ..do this if true.., ..otherwise do this..)</p>\r\n\r\n<h2>functions</h2>\r\n\r\n<p>fun &lt;- function(arg1, arg2='default value') {\r\n  42 # the last value in a function is returned. \r\n  # if you want to be explicit, use return(value)\r\n}\r\nfun(4)</p>\r\n\r\n<h2>basic data types</h2>\r\n\r\n<h3>vectors</h3>\r\n\r\n<p>c(1,2) concatenates 1 and 2 into a vector\r\nv[n] retrieves the n-th element of v\r\nwhich(v == n) gives the indices at which v is equal to n</p>\r\n\r\n<h3>matrices</h3>\r\n\r\n<p>X %*% Y does matrix multiplication on X and Y\r\nt(X) returns the transpose of X\r\nX + 1 adds 1 to each element of X; other scalar operators work similarly</p>\r\n\r\n<h3>lists</h3>\r\n\r\n<p>l &lt;- list(1,2,'three') # constructs a list</p>\r\n\r\n<p>l[[1]] # retrieves the first element of l</p>"}, "commit"=>"Update", "id"=>"1"}
+  [4;36;1mCheat Load (0.0ms)[0m   [0;1mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+  [4;35;1mCheat Update (1.0ms)[0m   [0mUPDATE "cheats" SET "content" = '<p>array indexing: 1-based
+line-terminator: semicolon (optional)</p>
+
+<h1>basics</h1>
+
+<h2>comments</h2>
+
+<p>any text following a # is a comment</p>
+
+<h2>variables</h2>
+
+<p>x = 4 # assigns the value 4 to x
+ x &lt;- 4 # this does the same thing</p>
+
+<h2>operators</h2>
+
+<ul>
+<li><ul><li>addition</li></ul></li>
+<li><ul><li>subtraction</li></ul></li>
+<li><ul><li>multiplication</li></ul></li>
+<li>/ division</li>
+<li>^ exponentiation</li>
+<li>| logical or</li>
+<li>&amp; logical and</li>
+<li>! logical not</li>
+<li>&lt; less than</li>
+<li>&lt;= less than or equal</li>
+<li>> greater than</li>
+<li>>= greater than or equal</li>
+<li>== equality test</li>
+<li>!= inequality test</li>
+</ul>
+
+<h2>control flow</h2>
+
+<h3>if statements</h3>
+
+<p>if (condition) {
+ ..do stuff..
+ } else if (other&#95;condition) {
+ ..do other stuff..
+ } else {
+ ..do last resort stuff..
+ }</p>
+
+<p>ifelse(condition, ..do this if true.., ..otherwise do this..)</p>
+
+<h2>functions</h2>
+
+<p>fun &lt;- function(arg1, arg2=''default value'') {
+ 42 # the last value in a function is returned. 
+ # if you want to be explicit, use return(value)
+}
+fun(4)</p>
+
+<h2>basic data types</h2>
+
+<h3>vectors</h3>
+
+<p>c(1,2) concatenates 1 and 2 into a vector
+v[n] retrieves the n-th element of v
+which(v == n) gives the indices at which v is equal to n</p>
+
+<h3>matrices</h3>
+
+<p>X %*% Y does matrix multiplication on X and Y
+t(X) returns the transpose of X
+X + 1 adds 1 to each element of X; other scalar operators work similarly</p>
+
+<h3>lists</h3>
+
+<p>l &lt;- list(1,2,''three'') # constructs a list</p>
+
+<p>l[[1]] # retrieves the first element of l</p>', "updated_at" = '2010-07-19 17:14:29' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/cheats/1
+Completed in 160ms (DB: 1) | 302 Found [http://localhost/cheats/1]
+
+
+Processing CheatsController#show (for 127.0.0.1 at 2010-07-19 13:14:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCheat Load (0.0ms)[0m   [0;1mSELECT * FROM "cheats" WHERE ("cheats"."id" = 1) [0m
+Rendering template within layouts/cheats
+Rendering cheats/show
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/cheats/1]
